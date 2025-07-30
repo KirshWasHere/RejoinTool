@@ -8,7 +8,12 @@ REQUIRED_LIBRARIES = {
     "psutil": "psutil",
     "keyboard": "keyboard",
     "requests": "requests",
-    "win32gui": "pywin32"
+    "win32gui": "pywin32",
+    "mss": "mss",
+    "cv2": "opencv-python",
+    "numpy": "numpy",
+    "selenium": "selenium"
+
 }
 
 def check_and_install_libraries():
