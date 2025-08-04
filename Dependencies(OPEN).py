@@ -68,3 +68,4 @@ if __name__ == "__main__":
     open_discord_invite()
     
     input("\nPress Enter to exit.")
+    #Isaac was Here
