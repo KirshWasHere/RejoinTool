@@ -52,7 +52,7 @@ RejoinTool
 
 --Includes a warning prompt upon launch, advising the use of alternate accounts.
 
-[Dependencies & Setup]
+[Dependencies and Setup]
 
 --A function automatically checks for and attempts to pip install missing dependencies, including licensing, psutil, keyboard, requests, and pywin32.
 
