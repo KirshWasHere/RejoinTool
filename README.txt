@@ -40,7 +40,7 @@ RejoinTool
 
 --CTRL+G: Toggle debug mode.
 
-[Configuration & Profiles]
+[Configuration and Profiles]
 
 --All settings and profiles are saved locally in a single universal_config.json file.
 
