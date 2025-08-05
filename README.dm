@@ -1,4 +1,3 @@
-
 https://Reejointool.xyz/hi
 
 RejoinTool
@@ -62,3 +61,15 @@ RejoinTool
 --Protected by the licensing library, requiring a valid license key tied to a machine's hardware ID for activation.
 
 --Includes a connection troubleshooter that can kill and restart the ADB server to resolve emulator connection issues.
+
+![Image 1 description](https://raw.githubusercontent.com/KirshWasHereAlt/test/refs/heads/main/test1%20(1).png)
+
+![Image 2 description](https://raw.githubusercontent.com/KirshWasHereAlt/test/refs/heads/main/test1%20(2).png)
+
+![Image 3 description](https://raw.githubusercontent.com/KirshWasHereAlt/test/refs/heads/main/test1%20(3).png)
+
+![Image 4 description](https://raw.githubusercontent.com/KirshWasHereAlt/test/refs/heads/main/test1%20(4).png)
+
+![Image 5 description](https://raw.githubusercontent.com/KirshWasHereAlt/test/refs/heads/main/test1%20(5).png)
+
+![Image 6 description](https://raw.githubusercontent.com/KirshWasHereAlt/test/refs/heads/main/test1%20(6).png)
