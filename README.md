@@ -1,4 +1,4 @@
-https://Reejointool.xyz/hi
+https://Rejointool.xyz/hi
 
 RejoinTool
 
