@@ -54,7 +54,7 @@ def check_and_install_libraries():
         print("All required libraries are already installed.")
 
 def open_discord_invite():
-    url = "https://discord.gg/2RQ4myfUBg"
+    url = "https://rejointool.xyz/hi"
     print(f"\nJoin for Updates\n-> {url}")
     webbrowser.open(url)
 
@@ -68,3 +68,4 @@ if __name__ == "__main__":
     open_discord_invite()
     
     input("\nPress Enter to exit.")
+    #Isaac was Here

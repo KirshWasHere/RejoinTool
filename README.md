@@ -1,4 +1,7 @@
+https://Rejointool.xyz/hi
+
 RejoinTool
+
 [Engine & Core Functionality]
 
 --Multi-threaded session management to monitor multiple game instances simultaneously.
@@ -37,7 +40,7 @@ RejoinTool
 
 --CTRL+G: Toggle debug mode.
 
-[Configuration & Profiles]
+[Configuration and Profiles]
 
 --All settings and profiles are saved locally in a single universal_config.json file.
 
@@ -49,7 +52,7 @@ RejoinTool
 
 --Includes a warning prompt upon launch, advising the use of alternate accounts.
 
-[Dependencies & Setup]
+[Dependencies and Setup]
 
 --A function automatically checks for and attempts to pip install missing dependencies, including licensing, psutil, keyboard, requests, and pywin32.
 
@@ -58,3 +61,10 @@ RejoinTool
 --Protected by the licensing library, requiring a valid license key tied to a machine's hardware ID for activation.
 
 --Includes a connection troubleshooter that can kill and restart the ADB server to resolve emulator connection issues.
+
+![Test Image 0](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/Screenshot%202025-08-04%20175549.png)
+![Test image 1](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(1).jpg)
+![Test image 2](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(2).jpg)
+![Test image 4](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(4).png)
+![Test image 5](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(5).jpg)
+![Test image 6](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(6).png)
