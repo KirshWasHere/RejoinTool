@@ -2,6 +2,9 @@
 https://Rejointool.xyz/hi
 RejoinTool
 
+Note If you don't see rejointool.py, it's because I'm fixing some issues.
+With how much Roblox has updated over the last few months, it broke some features in Rejointool.
+
 # Engine & Core Functionality
 
 - Multi-threaded session management to monitor multiple game instances simultaneously.
