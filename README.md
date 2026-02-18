@@ -56,7 +56,8 @@ With how much Roblox has updated over the last few months, it broke some feature
 - Includes a warning prompt upon launch, advising the use of alternate accounts.
 
 Note: Some users may use this with executors to autofarm in their favorite games. With that said, I am not responsible for any bans.
-I originally made this tool for my personal use, but I decided to host it on GitHub since many people requested it.
+I originally made this tool for my personal use and started selling it under a license system.
+Then, I realized Python programs shouldn't be sold—there's no point unless it's something crazy—so I decided to host it on GitHub since many people requested it.
 
 ![Test Image 0](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/Screenshot%202025-08-04%20175549.png)
 ![Test image 1](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(1).jpg)
