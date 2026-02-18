@@ -1,6 +1,4 @@
-![Test Image 0](https://raw.githubusercontent.com/KirshWasHere/KeysTest/main/Rejointool.png)
-https://Rejointool.xyz/hi
-RejoinTool
+![Test Image 0](https://raw.githubusercontent.com/KirshWasHere/KeysTest/main/Rejointool.png) https://Rejointool.xyz/hi
 
 Note If you don't see rejointool.py, it's because I'm fixing some issues.
 With how much Roblox has updated over the last few months, it broke some features in Rejointool.
