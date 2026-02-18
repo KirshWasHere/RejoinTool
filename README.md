@@ -1,4 +1,3 @@
-# Licensed under the MIT License.
 https://Rejointool.xyz/hi
 RejoinTool
 
