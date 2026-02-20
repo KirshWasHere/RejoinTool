@@ -64,4 +64,3 @@ Then, I realized Python programs shouldn't be sold—there's no point unless it'
 ![Test image 4](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(4).png)
 ![Test image 5](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(5).jpg)
 ![Test image 6](https://raw.githubusercontent.com/KirshWasHere/KeysTest/d8d75550eae322cb14c592c6f2079a7b5bbb569f/test1%20(6).png)
-<img src="https://tenor.com/view/epstein-jeffrey-epstein-ethan-gif-13575813581334004253" alt="GIF">
