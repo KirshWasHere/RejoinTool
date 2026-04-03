@@ -840,7 +840,7 @@ def save_config(data):
         sys.exit(1)
 
 def load_config():
-    default_config = {'profiles': {}, 'roblox_accounts': {}, 'last_used_profile': None, 'settings': {'theme_name': 'Default', 'theme_color_override': None}}
+    default_config = {'profiles': {}, 'roblox_accounts': {}, 'last_used_profile': None, 'settings': {'theme_name': 'Default', 'theme_color_override': None, 'custom_roblox_path': None}}
     if not os.path.exists(CONFIG_FILENAME):
         save_config(default_config)
         return default_config
@@ -1485,7 +1485,13 @@ def launch_roblox_instance(profile, target, adb_path=None):
         placelauncher_url = f'https%3A%2F%2Fassetgame.roblox.com%2Fgame%2FPlaceLauncher.ashx%3Frequest%3DRequestGame%26browserTrackerId%3D{browser_tracker_id}%26placeId%3D{place_id}%26isPlayTogetherGame%3Dfalse'
         launch_url = f'roblox-player:1+launchmode:play+gameinfo:{auth_ticket}+launchtime:{int(time.time() * 1000)}+placelauncherurl:{placelauncher_url}+browsertrackerid:{browser_tracker_id}+robloxLocale:en_us+gameLocale:en_us+channel:+LaunchExp:InApp'
         try:
-            os.startfile(launch_url)
+            config = load_config()
+            custom_path = config.get('settings', {}).get('custom_roblox_path')
+            if custom_path and os.path.exists(custom_path):
+                log_event(f'Using custom Roblox path: {custom_path}', 'INFO', session_key)
+                subprocess.Popen([custom_path, launch_url])
+            else:
+                os.startfile(launch_url)
             log_event('Roblox launch command sent!', 'INFO', session_key)
         except Exception as e:
             log_event(f'Error launching Roblox: {e}', 'ERROR', session_key)
@@ -2680,8 +2686,13 @@ def show_settings_menu():
         session_duration = session_defaults.get('duration', 0)
         session_text = 'Unlimited' if session_duration == 0 else f'{session_duration}h'
         print_centered(f'Default Session Duration: {colorize(session_text, C.CYAN)}')
+        custom_roblox_path = config.get('settings', {}).get('custom_roblox_path')
+        if custom_roblox_path:
+            print_centered(f'Custom Roblox Path: {colorize(custom_roblox_path, C.GREEN)}')
+        else:
+            print_centered('Custom Roblox Path: Not Set')
         print()
-        options = ['Change Theme', 'Change Accent Color', 'Freeze Detection Defaults', 'Scheduled Restart Defaults', 'Session Duration Default', 'Back to Main Menu']
+        options = ['Change Theme', 'Change Accent Color', 'Freeze Detection Defaults', 'Scheduled Restart Defaults', 'Session Duration Default', 'Set Custom Roblox Path', 'Back to Main Menu']
         choice = get_choice('Select an option', options)
         if choice == 1:
             theme_names = list(THEMES.keys())
@@ -2710,6 +2721,8 @@ def show_settings_menu():
         elif choice == 5:
             configure_session_duration_default(config)
         elif choice == 6:
+            configure_custom_roblox_path(config)
+        elif choice == 7:
             break
 
 def configure_freeze_detection_defaults(config):
@@ -2920,6 +2933,46 @@ def configure_session_duration_default(config):
         except (ValueError, TypeError):
             show_error('Invalid input. Please enter a number.')
             time.sleep(1.5)
+
+def configure_custom_roblox_path(config):
+    draw_header('CUSTOM ROBLOX PATH')
+    print_centered('Set a custom path to RobloxPlayerBeta.exe')
+    print_centered('Use this if the tool fails to find your Roblox installation')
+    print()
+    current_path = config.get('settings', {}).get('custom_roblox_path')
+    if current_path:
+        print_centered(f'Current: {colorize(current_path, C.GREEN)}')
+    else:
+        print_centered('Current: Not Set')
+    print()
+    options = ['Set Custom Path', 'Clear Custom Path', 'Back']
+    choice = get_choice('Select an option', options)
+    if choice == 1:
+        path_input = get_input('Enter full path to RobloxPlayerBeta.exe')
+        if not path_input:
+            return
+        path_input = path_input.strip().strip('"').strip("'")
+        if not os.path.exists(path_input):
+            show_error('Path does not exist')
+            time.sleep(1.5)
+            return
+        if not path_input.lower().endswith('.exe'):
+            show_error('Path must point to an .exe file')
+            time.sleep(1.5)
+            return
+        if 'settings' not in config:
+            config['settings'] = {}
+        config['settings']['custom_roblox_path'] = path_input
+        save_config(config)
+        show_success('Custom Roblox path set')
+        time.sleep(1.5)
+    elif choice == 2:
+        if 'settings' not in config:
+            config['settings'] = {}
+        config['settings']['custom_roblox_path'] = None
+        save_config(config)
+        show_success('Custom Roblox path cleared')
+        time.sleep(1.5)
 
 class ServerHopManager:
     """Manages server hopping functionality for chat spammer"""
